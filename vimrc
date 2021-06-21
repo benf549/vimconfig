@@ -56,12 +56,15 @@ set incsearch
 set ignorecase
 set smartcase
 set showmatch
+set visualbell
+set t_vb=
 
 " Use VS-CODE Inspired Colorscheme.
 colorscheme codedark
 " Set background to see transparent terminal background.
 highlight Normal ctermbg=NONE guibg=NONE
 highlight EndOfBuffer ctermfg=DarkGrey ctermbg=NONE guifg=#666666 guibg=NONE
+highlight NonText ctermbg=NONE
 " The guicolors and builtin vim terminal is broken so split screen with winterm
 highlight Terminal guibg=#1e1e1e
 " Colors current line differently from relative lines.
