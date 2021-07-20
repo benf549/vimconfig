@@ -11,6 +11,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'hdima/python-syntax'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
 Plugin 'tomasiser/vim-code-dark'
@@ -24,15 +25,16 @@ filetype plugin indent on
 " :PluginUpdate
 
 syntax on
+let python_highlight_all=1
 let mapleader = " "
 
 set noshowmode " hides --insert-- extra line
-set termguicolors " Use full terminal colors.
+" set termguicolors " Use full terminal colors.
 set mouse=a
 set title
 set history=1000
 set nowrap
-set listchars=tab:▸\ ,eol:¬ " Visualize tabs and newlines
+" set listchars=tab:▸\ ,eol:¬ " Visualize tabs and newlines
 set modelines=0 " Security
 set relativenumber " Show relative and absolute line #s
 set number
@@ -56,12 +58,15 @@ set incsearch
 set ignorecase
 set smartcase
 set showmatch
+set visualbell
+set t_vb=
 
 " Use VS-CODE Inspired Colorscheme.
 colorscheme codedark
 " Set background to see transparent terminal background.
 highlight Normal ctermbg=NONE guibg=NONE
 highlight EndOfBuffer ctermfg=DarkGrey ctermbg=NONE guifg=#666666 guibg=NONE
+highlight NonText ctermbg=NONE
 " The guicolors and builtin vim terminal is broken so split screen with winterm
 highlight Terminal guibg=#1e1e1e
 " Colors current line differently from relative lines.
